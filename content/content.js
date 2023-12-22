@@ -1,8 +1,24 @@
 // content.js
 
+// Function to inject Font Awesome stylesheet
+function injectFontAwesomeStylesheet() {
+  const style = document.createElement("link");
+  style.rel = "stylesheet";
+  style.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
+  style.integrity = "sha512-rG6Rj0A4NecuRvnLPYBz8CC3vQW3IeKc8O+q1S62I4OH7vE+frTFu/6KrGnIpGgAr9Nxdx4E1W6+sw4i1Oj7Fg==";
+  style.crossOrigin = "anonymous";
+  style.referrerPolicy = "no-referrer";
+
+  // Append the stylesheet to the head of the document
+  document.head.appendChild(style);
+}
+
 // Function to create the button
 function createAlphaXIVButton() {
   const arXivId = window.location.pathname.split("/").pop();
+
+  // Inject Font Awesome stylesheet
+  injectFontAwesomeStylesheet();
 
   // Create the button element
   const button = document.createElement("button");
