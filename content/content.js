@@ -6,9 +6,12 @@ function createAlphaXIVButton() {
 
   // Create the button element
   const button = document.createElement("button");
-  button.innerHTML = '<span style="margin-right: 5px;"><i class="fas fa-comment-alt"></i></span> Open Chat';
+  button.innerHTML = '<span style="margin-right: 5px;"><i class="fas fa-comment-alt"></i></span> Open in AlphaXIV';
 
   // Style the button
+  button.style.position = "fixed";
+  button.style.top = "20px";
+  button.style.right = "20px";
   button.style.backgroundColor = "#007BFF";  // Blue color
   button.style.color = "#FFFFFF";  // White text color
   button.style.border = "none";
@@ -21,7 +24,7 @@ function createAlphaXIVButton() {
     window.open(`https://alphaxiv.org/abs/${arXivId}`, "_blank");
   });
 
-  // Append the button to the body or any desired location on the page
+  // Append the button to the body
   document.body.appendChild(button);
 }
 
