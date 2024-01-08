@@ -16,4 +16,4 @@ The AlphaXIV Firefox Addon connects ArXiv papers to AlphaXIV, allowing users to 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/alphaxiv-firefox-addon.git
+   git clone https://github.com/rehman-talha/alphaxiv-firefox-addon.git
