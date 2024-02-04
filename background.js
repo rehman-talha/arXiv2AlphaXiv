@@ -1,18 +1,19 @@
 // background.js
 
+// Listener registration for onBeforeRequest event
 browser.webRequest.onBeforeRequest.addListener(
-  redirectArxivToAlphaXiv,
+  details => {
+    // Redirect the URL using the convertArxivToAlphaXiv function
+    const redirectUrl = convertArxivToAlphaXiv(details.url);
+
+    // Return an object with the redirectUrl property
+    return { redirectUrl };
+  },
   { urls: ["*://arxiv.org/*"] },
   ["blocking"]
 );
 
-function redirectArxivToAlphaXiv(details) {
-  const arxivUrl = details.url;
-  const alphaXivUrl = convertArxivToAlphaXiv(arxivUrl);
-
-  return { redirectUrl: alphaXivUrl };
-}
-
+// Function to convert ArXiv URL to AlphaXiv URL
 function convertArxivToAlphaXiv(arxivUrl) {
   // Implement your logic to convert ArXiv URL to AlphaXiv URL
   // Example: replace 'arxiv.org' with 'alphaxiv.org'
