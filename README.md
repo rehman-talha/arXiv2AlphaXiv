@@ -4,7 +4,7 @@
 
 ## Description
 
-With a simple click on the addon button, users are seamlessly redirected to the dedicated discussion page on AlphaXiv for every [arXiv](https://arxiv.org/) paper, where they can engage in conversations, share insights, and contribute to the academic discourse.
+With a simple click on the addon button, users are seamlessly redirected to the dedicated discussion page on [AlphaXiv](https://alphaxiv.org/) for every [arXiv](https://arxiv.org/) paper, where they can engage in conversations, share insights, and contribute to the academic discourse.
 
 ## AlphaXiv
 [AlphaXiv](https://alphaxiv.org/) is an innovative project initiated by Stanford students to improve collaboration and foster meaningful discussions around research papers.
