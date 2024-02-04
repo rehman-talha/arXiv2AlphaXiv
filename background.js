@@ -1,22 +1,18 @@
-if (browser.webRequest) {
-  browser.webRequest.onBeforeRequest.addListener(
-    redirectArxivToAlphaXiv,
-    { urls: ["*://arxiv.org/*"] },
-    ["blocking"]
-  );
+// background.js
 
-  function redirectArxivToAlphaXiv(details) {
-    const arxivUrl = details.url;
-    const alphaXivUrl = convertArxivToAlphaXiv(arxivUrl);
+chrome.browserAction.onClicked.addListener(function (tab) {
+  // Check if the clicked tab has a valid ArXiv URL
+  const arxivPattern = /^https:\/\/arxiv.org\/(.+)/;
+  const match = tab.url.match(arxivPattern);
 
-    return { redirectUrl: alphaXivUrl };
+  if (match) {
+    // Extract the identifier from the ArXiv URL
+    const arxivIdentifier = match[1];
+
+    // Build the corresponding AlphaXiv URL
+    const alphaXivURL = `https://alphaxiv.org/${arxivIdentifier}`;
+
+    // Open a new tab with the AlphaXiv URL
+    chrome.tabs.create({ url: alphaXivURL });
   }
-
-  function convertArxivToAlphaXiv(arxivUrl) {
-    // Implement your logic to convert ArXiv URL to AlphaXiv URL
-    // Example: replace 'arxiv.org' with 'alphaxiv.org'
-    return arxivUrl.replace('arxiv.org', 'alphaxiv.org');
-  }
-} else {
-  console.error("browser.webRequest is not supported in this Firefox version.");
-}
+});
