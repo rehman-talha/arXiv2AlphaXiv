@@ -1,3 +1,5 @@
+// options.js
+
 const saveOptions = (e) => {
   e.preventDefault();
 
@@ -26,14 +28,3 @@ const restoreOptions = async () => {
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
-
-document.getElementById('settingsForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-
-  var notification = document.querySelector('.notification');
-  notification.style.display = 'block';
-
-  setTimeout(function () {
-    notification.style.display = 'none';
-  }, 2000);
-});
