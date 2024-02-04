@@ -1,12 +1,10 @@
-# arxiv2alpha-Firefox
-
-## Under Construction 🏗️
+# AlphaXiv
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-The AlphaXIV Firefox Addon connects ArXiv papers to AlphaXIV, allowing users to seamlessly transition from ArXiv to AlphaXIV for enhanced collaboration and discussion.
+The AlphaXiv Firefox Addon connects ArXiv papers to AlphaXIV, allowing users to seamlessly transition from ArXiv to AlphaXIV for enhanced collaboration and discussion.
 
 ## Features
 
