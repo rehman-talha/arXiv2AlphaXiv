@@ -1,21 +1,22 @@
-// background.js
+if (browser.webRequest) {
+  browser.webRequest.onBeforeRequest.addListener(
+    redirectArxivToAlphaXiv,
+    { urls: ["*://arxiv.org/*"] },
+    ["blocking"]
+  );
 
-// Listener registration for onBeforeRequest event
-browser.webRequest.onBeforeRequest.addListener(
-  details => {
-    // Redirect the URL using the convertArxivToAlphaXiv function
-    const redirectUrl = convertArxivToAlphaXiv(details.url);
+  function redirectArxivToAlphaXiv(details) {
+    const arxivUrl = details.url;
+    const alphaXivUrl = convertArxivToAlphaXiv(arxivUrl);
 
-    // Return an object with the redirectUrl property
-    return { redirectUrl };
-  },
-  { urls: ["*://arxiv.org/*"] },
-  ["blocking"]
-);
+    return { redirectUrl: alphaXivUrl };
+  }
 
-// Function to convert ArXiv URL to AlphaXiv URL
-function convertArxivToAlphaXiv(arxivUrl) {
-  // Implement your logic to convert ArXiv URL to AlphaXiv URL
-  // Example: replace 'arxiv.org' with 'alphaxiv.org'
-  return arxivUrl.replace('arxiv.org', 'alphaxiv.org');
+  function convertArxivToAlphaXiv(arxivUrl) {
+    // Implement your logic to convert ArXiv URL to AlphaXiv URL
+    // Example: replace 'arxiv.org' with 'alphaxiv.org'
+    return arxivUrl.replace('arxiv.org', 'alphaxiv.org');
+  }
+} else {
+  console.error("browser.webRequest is not supported in this Firefox version.");
 }
