@@ -4,7 +4,7 @@
 
 ## Description
 
-The AlphaXiv Firefox Addon connects ArXiv papers to AlphaXIV, allowing users to seamlessly transition from ArXiv to AlphaXIV for enhanced collaboration and discussion.
+The AlphaXiv Firefox Addon connects ArXiv papers to AlphaXiv, allowing users to seamlessly transition from ArXiv to AlphaXIV for enhanced collaboration and discussion.
 
 ## Features
 
