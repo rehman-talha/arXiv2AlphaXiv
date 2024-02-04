@@ -8,10 +8,22 @@
   },
   "permissions": [
     "webNavigation",
-    "storage"
+    "storage",
+    "tabs"  // Added tabs permission
   ],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://arxiv.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icon.png",
+    "default_title": "ArXiv Redirector"
   }
 }
