@@ -6,18 +6,28 @@
   "icons": {
     "48": "icon.png"
   },
-  "permissions": [
-    "webNavigation",
-    "storage"
-  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "content_scripts": [
-    {
-      "matches": ["*://arxiv.org/*"],
-      "js": ["content.js"]
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "icon.png",
+    "default_title": "ArXiv Redirector"
+  },
+  "permissions": [
+    "webNavigation",
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+  "options_ui": {
+    "page": "preferences.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "abcd@email.com",
+      "strict_min_version": "48.0"
     }
-  ]
+  }
 }
