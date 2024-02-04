@@ -9,7 +9,7 @@
   "permissions": [
     "webNavigation",
     "storage",
-    "tabs"  // Added tabs permission
+    "tabs" 
   ],
   "background": {
     "scripts": ["background.js"],
