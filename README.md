@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+#Status = ✅
+
 ## Description
 
 With a simple click on the addon button, users are seamlessly redirected to the dedicated discussion page on [AlphaXiv](https://alphaxiv.org/) for every [arXiv](https://arxiv.org/) paper, where they can engage in conversations, share insights, and contribute to the academic discourse.
